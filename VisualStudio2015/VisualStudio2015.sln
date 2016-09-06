@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpConsole", "CSharpCons
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CPPCLIConsole", "CPPCLIConsole\CPPCLIConsole.vcxproj", "{A8C23237-7F61-4874-9E1E-9DA471128D0B}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CPPConsole", "CPPConsole\CPPConsole.vcxproj", "{0F27685B-BFB7-4AEE-BF09-CAB80B0C5DB3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,6 +49,19 @@ Global
 		{A8C23237-7F61-4874-9E1E-9DA471128D0B}.Release|Win32.Build.0 = Release|Win32
 		{A8C23237-7F61-4874-9E1E-9DA471128D0B}.Release|x64.ActiveCfg = Release|x64
 		{A8C23237-7F61-4874-9E1E-9DA471128D0B}.Release|x64.Build.0 = Release|x64
+		{0F27685B-BFB7-4AEE-BF09-CAB80B0C5DB3}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{0F27685B-BFB7-4AEE-BF09-CAB80B0C5DB3}.Debug|Mixed Platforms.ActiveCfg = Debug|Win32
+		{0F27685B-BFB7-4AEE-BF09-CAB80B0C5DB3}.Debug|Mixed Platforms.Build.0 = Debug|Win32
+		{0F27685B-BFB7-4AEE-BF09-CAB80B0C5DB3}.Debug|Win32.ActiveCfg = Debug|Win32
+		{0F27685B-BFB7-4AEE-BF09-CAB80B0C5DB3}.Debug|Win32.Build.0 = Debug|Win32
+		{0F27685B-BFB7-4AEE-BF09-CAB80B0C5DB3}.Debug|x64.ActiveCfg = Debug|Win32
+		{0F27685B-BFB7-4AEE-BF09-CAB80B0C5DB3}.Release|Any CPU.ActiveCfg = Release|Win32
+		{0F27685B-BFB7-4AEE-BF09-CAB80B0C5DB3}.Release|Mixed Platforms.ActiveCfg = Release|Win32
+		{0F27685B-BFB7-4AEE-BF09-CAB80B0C5DB3}.Release|Mixed Platforms.Build.0 = Release|Win32
+		{0F27685B-BFB7-4AEE-BF09-CAB80B0C5DB3}.Release|Win32.ActiveCfg = Release|Win32
+		{0F27685B-BFB7-4AEE-BF09-CAB80B0C5DB3}.Release|Win32.Build.0 = Release|Win32
+		{0F27685B-BFB7-4AEE-BF09-CAB80B0C5DB3}.Release|x64.ActiveCfg = Release|x64
+		{0F27685B-BFB7-4AEE-BF09-CAB80B0C5DB3}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
