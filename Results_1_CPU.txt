@@ -1,0 +1,52 @@
+
+C:\src\NativeCompileExperiments>C:\src\NativeCompileExperiments\VisualStudio2015\CSharpConsole\bin\x64\Release\CSharpConsole.exe
+**                                                               **
+** SciMark2a Numeric Benchmark, see http://math.nist.gov/scimark **
+**                                                               **
+Mininum running time = 2 seconds
+
+Composite Score: 1146.00 MFlops
+FFT            : 1193.93 - (1024)
+SOR            : 1136.69 - (100x100)
+Monte Carlo    :  93.37
+Sparse MatMult : 1342.10 - (N=1000, nz=5000)
+LU             : 1963.90 - (100x100)
+
+C:\src\NativeCompileExperiments>C:\src\NativeCompileExperiments\VisualStudio2015\x64\Release\CPPCliConsole2015.exe
+**                                                              **
+** SciMark2 Numeric Benchmark, see http://math.nist.gov/scimark **
+** for details. (Results can be submitted to pozo@nist.gov)     **
+**                                                              **
+Using       2.00 seconds min time per kenel.
+Composite Score:         1695.86
+FFT             Mflops:  1481.31    (N=1024)
+SOR             Mflops:  1443.41    (100 x 100)
+MonteCarlo:     Mflops:   233.83
+Sparse matmult  Mflops:  1863.14    (N=1000, nz=5000)
+LU              Mflops:  3457.63    (M=100, N=100)
+
+C:\src\NativeCompileExperiments>C:\src\NativeCompileExperiments\VisualStudio2015\x64\Release\CPPConsole.exe
+**                                                              **
+** SciMark2 Numeric Benchmark, see http://math.nist.gov/scimark **
+** for details. (Results can be submitted to pozo@nist.gov)     **
+**                                                              **
+Using       2.00 seconds min time per kenel.
+Composite Score:         1989.75
+FFT             Mflops:  1717.62    (N=1024)
+SOR             Mflops:  1513.71    (100 x 100)
+MonteCarlo:     Mflops:   274.90
+Sparse matmult  Mflops:  2281.50    (N=1000, nz=5000)
+LU              Mflops:  4161.02    (M=100, N=100)
+
+C:\src\NativeCompileExperiments>C:\src\NativeCompileExperiments\VisualStudio2015\x64\Release\CPPConsole2015.exe
+**                                                              **
+** SciMark2 Numeric Benchmark, see http://math.nist.gov/scimark **
+** for details. (Results can be submitted to pozo@nist.gov)     **
+**                                                              **
+Using       2.00 seconds min time per kenel.
+Composite Score:         2351.22
+FFT             Mflops:  1919.91    (N=1024)
+SOR             Mflops:  1892.88    (100 x 100)
+MonteCarlo:     Mflops:   495.95
+Sparse matmult  Mflops:  2165.58    (N=1000, nz=5000)
+LU              Mflops:  5281.75    (M=100, N=100)
