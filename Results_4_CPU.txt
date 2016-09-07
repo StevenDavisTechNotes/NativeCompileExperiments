@@ -1,0 +1,41 @@
+
+C:\src\NativeCompileExperiments>C:\src\NativeCompileExperiments\VisualStudio2015\CSharpConsole\bin\x64\Release\CSharpConsole.exe
+**                                                               **
+** SciMark2a Numeric Benchmark, see http://math.nist.gov/scimark **
+**                                                               **
+Mininum running time = 2 seconds
+
+Composite Score: 1167.24 MFlops
+FFT            : 1213.41 - (1024)
+SOR            : 1147.01 - (100x100)
+Monte Carlo    :  97.64
+Sparse MatMult : 1369.42 - (N=1000, nz=5000)
+LU             : 2008.72 - (100x100)
+
+C:\src\NativeCompileExperiments>C:\src\NativeCompileExperiments\VisualStudio2015\x64\Release\CPPCliConsole2015.exe
+**                                                              **
+** SciMark2 Numeric Benchmark, see http://math.nist.gov/scimark **
+** for details. (Results can be submitted to pozo@nist.gov)     **
+**                                                              **
+Using       2.00 seconds min time per kenel.
+Composite Score:         1787.01
+FFT             Mflops:  1704.19    (N=1024)
+SOR             Mflops:  1531.76    (100 x 100)
+MonteCarlo:     Mflops:   242.49
+Sparse matmult  Mflops:  1949.03    (N=1000, nz=5000)
+LU              Mflops:  3507.60    (M=100, N=100)
+
+C:\src\NativeCompileExperiments>rem C:\src\NativeCompileExperiments\VisualStudio2015\x64\Release\CPPConsole.exe 
+
+C:\src\NativeCompileExperiments>C:\src\NativeCompileExperiments\VisualStudio2015\x64\Release\CPPConsole2015.exe
+**                                                              **
+** SciMark2 Numeric Benchmark, see http://math.nist.gov/scimark **
+** for details. (Results can be submitted to pozo@nist.gov)     **
+**                                                              **
+Using       2.00 seconds min time per kenel.
+Composite Score:         2398.20
+FFT             Mflops:  1993.99    (N=1024)
+SOR             Mflops:  1958.79    (100 x 100)
+MonteCarlo:     Mflops:   530.24
+Sparse matmult  Mflops:  2241.50    (N=1000, nz=5000)
+LU              Mflops:  5266.47    (M=100, N=100)
