@@ -7,7 +7,7 @@ all: scimark2
 
 CC = cc
 LDFLAGS = 
-CFLAGS = -O3
+CFLAGS = -Ofast
 
 OBJS = FFT.o kernel.o Stopwatch.o Random.o SOR.o SparseCompRow.o \
 	array.o MonteCarlo.o LU.o 
