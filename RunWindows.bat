@@ -1,3 +1,4 @@
+start /wait VisualStudio2013\Wpf2013\bin\x64\Release\Wpf2013.exe
 VisualStudio2013\CSharp2013\bin\x64\Release\csharp2013.exe
 VisualStudio2013\x64\Release\cpp2013.exe
 VisualStudio2013\x64\Release\cppcli2013.exe
