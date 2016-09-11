@@ -1,1 +1,1 @@
-C:\Src\GitHubPublic\NativeCompileExperiments\gcc\C\scimark2.exe
+./gcc/C/scimark2.exe
