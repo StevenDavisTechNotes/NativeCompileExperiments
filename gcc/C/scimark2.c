@@ -61,8 +61,7 @@ int main(int argc, char *argv[])
 		printf("Using %10.2f seconds min time per kenel.\n", min_time);
 
 		FILE *fp;
-		errno_t err;
-		if ((err = fopen_s(&fp, "ResultLog.txt", "at")) != 0)
+		if ((fp = fopen("ResultLog.txt", "at")) == NULL)
 		{
 			fprintf(stderr, "File was not opened\n");
 			exit(1);
