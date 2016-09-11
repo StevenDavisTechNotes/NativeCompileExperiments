@@ -7,8 +7,8 @@
     <ProjectGuid>{4826D1A9-A118-4098-BCC0-3F632CB1EA8C}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CSharpConsole</RootNamespace>
-    <AssemblyName>CSharpConsole</AssemblyName>
+    <RootNamespace>CSharp2013</RootNamespace>
+    <AssemblyName>CSharp2013</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
