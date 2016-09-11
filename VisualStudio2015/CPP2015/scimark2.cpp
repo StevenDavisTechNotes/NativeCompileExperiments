@@ -61,30 +61,43 @@ int main(int argc, char *argv[])
 		print_banner();
 		printf("Using %10.2f seconds min time per kenel.\n", min_time);
 
-        res[1] = kernel_measureFFT( FFT_size, min_time, R);   
-        res[2] = kernel_measureSOR( SOR_size, min_time, R);   
-        res[3] = kernel_measureMonteCarlo(min_time, R); 
-        res[4] = kernel_measureSparseMatMult( Sparse_size_M, 
-                Sparse_size_nz, min_time, R);           
-        res[5] = kernel_measureLU( LU_size, min_time, R);  
+		FILE *fp;
+		errno_t err;
+		if ((err = fopen_s(&fp, "ResultLog.txt", "at")) != 0)
+		{
+			fprintf(stderr, "File was not opened\n");
+			exit(1);
+		}
+
+		int NumTimes = 5;
+		for (int iTime = 0; iTime < NumTimes; iTime++)
+		{
+			res[1] = kernel_measureFFT(FFT_size, min_time, R);
+			res[2] = kernel_measureSOR(SOR_size, min_time, R);
+			res[3] = kernel_measureMonteCarlo(min_time, R);
+			res[4] = kernel_measureSparseMatMult(Sparse_size_M,
+				Sparse_size_nz, min_time, R);
+			res[5] = kernel_measureLU(LU_size, min_time, R);
 
 
 
-        res[0] = (res[1] + res[2] + res[3] + res[4] + res[5]) / 5;
+			res[0] = (res[1] + res[2] + res[3] + res[4] + res[5]) / 5;
+			fprintf(fp, "CPP2015,%8.2f\n", res[0]);
 
-        /* print out results  */
-        printf("Composite Score:        %8.2f\n" ,res[0]);
-        printf("FFT             Mflops: %8.2f    (N=%d)\n", res[1], FFT_size);
-        printf("SOR             Mflops: %8.2f    (%d x %d)\n", 		
+			/* print out results  */
+			printf("Composite Score:        %8.2f\n", res[0]);
+			printf("FFT             Mflops: %8.2f    (N=%d)\n", res[1], FFT_size);
+			printf("SOR             Mflops: %8.2f    (%d x %d)\n",
 				res[2], SOR_size, SOR_size);
-        printf("MonteCarlo:     Mflops: %8.2f\n", res[3]);
-        printf("Sparse matmult  Mflops: %8.2f    (N=%d, nz=%d)\n", res[4], 
-					Sparse_size_M, Sparse_size_nz);
-        printf("LU              Mflops: %8.2f    (M=%d, N=%d)\n", res[5],
+			printf("MonteCarlo:     Mflops: %8.2f\n", res[3]);
+			printf("Sparse matmult  Mflops: %8.2f    (N=%d, nz=%d)\n", res[4],
+				Sparse_size_M, Sparse_size_nz);
+			printf("LU              Mflops: %8.2f    (M=%d, N=%d)\n", res[5],
 				LU_size, LU_size);
 
-
-        Random_delete(R);
+		}
+		fclose(fp);
+		Random_delete(R);
 
         return 0;
   

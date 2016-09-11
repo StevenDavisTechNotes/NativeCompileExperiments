@@ -60,6 +60,18 @@ int main(int argc, char *argv[])
 		print_banner();
 		printf("Using %10.2f seconds min time per kenel.\n", min_time);
 
+		FILE *fp;
+		errno_t err;
+		if ((err = fopen_s(&fp, "ResultLog.txt", "at")) != 0)
+		{
+			fprintf(stderr, "File was not opened\n");
+			exit(1);
+		}
+
+		int NumTimes = 5;
+		for (int iTime = 0; iTime < NumTimes; iTime++)
+		{
+
         res[1] = kernel_measureFFT( FFT_size, min_time, R);   
         res[2] = kernel_measureSOR( SOR_size, min_time, R);   
         res[3] = kernel_measureMonteCarlo(min_time, R); 
@@ -70,6 +82,7 @@ int main(int argc, char *argv[])
 
 
         res[0] = (res[1] + res[2] + res[3] + res[4] + res[5]) / 5;
+		fprintf(fp, "GCC,%8.2f\n", res[0]);
 
         /* print out results  */
         printf("Composite Score:        %8.2f\n" ,res[0]);
@@ -81,7 +94,9 @@ int main(int argc, char *argv[])
 					Sparse_size_M, Sparse_size_nz);
         printf("LU              Mflops: %8.2f    (M=%d, N=%d)\n", res[5],
 				LU_size, LU_size);
+}
 
+		fclose(fp);
 
         Random_delete(R);
 

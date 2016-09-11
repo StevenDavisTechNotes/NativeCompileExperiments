@@ -10,6 +10,7 @@
 /// </license>
 
 using System;
+using System.IO;
 
 namespace SciMark2
 {
@@ -71,23 +72,29 @@ namespace SciMark2
 			// run the benchmark
 			double[] res = new double[6];
 			SciMark2.Random R = new SciMark2.Random(Constants.RANDOM_SEED);
-			
-			Console.WriteLine("Mininum running time = {0} seconds", min_time);
-			
-            res[1] = kernel.measureFFT(FFT_size, min_time, R);
-            
-            res[2] = kernel.measureSOR(SOR_size, min_time, R);  
-          
-			res[3] = kernel.measureMonteCarlo(min_time, R);
-			
-            res[4] = kernel.measureSparseMatmult(Sparse_size_M, Sparse_size_nz, min_time, R);
-			
-            res[5] = kernel.measureLU(LU_size, min_time, R);			
 
-			res[0] = (res[1] + res[2] + res[3] + res[4] + res[5]) / 5;
-			
-			
-			// print out results
+            Console.WriteLine("Mininum running time = {0} seconds", min_time);
+
+            int NumTimes = 5;
+		    for (int iTime = 0; iTime < NumTimes; iTime++)
+		    {
+
+		        res[1] = kernel.measureFFT(FFT_size, min_time, R);
+
+		        res[2] = kernel.measureSOR(SOR_size, min_time, R);
+
+		        res[3] = kernel.measureMonteCarlo(min_time, R);
+
+		        res[4] = kernel.measureSparseMatmult(Sparse_size_M, Sparse_size_nz, min_time, R);
+
+		        res[5] = kernel.measureLU(LU_size, min_time, R);
+
+		        res[0] = (res[1] + res[2] + res[3] + res[4] + res[5])/5;
+
+		        File.AppendAllText("ResultLog.txt", string.Format("CSharp2015,{0:F2}\n", res[0]));
+		    }
+
+		    // print out results
 			Console.WriteLine();
             Console.WriteLine("Composite Score: {0:F2} MFlops",res[0]);
 			Console.WriteLine("FFT            : {0} - ({1})", res[1] == 0.0 ? "ERROR, INVALID NUMERICAL RESULT!" : res[1].ToString("F2"), FFT_size);            

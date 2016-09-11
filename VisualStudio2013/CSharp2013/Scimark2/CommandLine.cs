@@ -10,6 +10,7 @@
 /// </license>
 
 using System;
+using System.IO;
 
 namespace SciMark2
 {
@@ -74,6 +75,10 @@ namespace SciMark2
 			
 			Console.WriteLine("Mininum running time = {0} seconds", min_time);
 			
+            int NumTimes = 5;
+		    for (int iTime = 0; iTime < NumTimes; iTime++)
+		    {
+
             res[1] = kernel.measureFFT(FFT_size, min_time, R);
             
             res[2] = kernel.measureSOR(SOR_size, min_time, R);  
@@ -86,6 +91,8 @@ namespace SciMark2
 
 			res[0] = (res[1] + res[2] + res[3] + res[4] + res[5]) / 5;
 			
+		        File.AppendAllText("ResultLog.txt", string.Format("CSharp2013,{0:F2}\n", res[0]));
+		    }
 			
 			// print out results
 			Console.WriteLine();
