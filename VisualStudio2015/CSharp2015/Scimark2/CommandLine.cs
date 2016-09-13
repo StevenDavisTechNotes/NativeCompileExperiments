@@ -75,7 +75,7 @@ namespace SciMark2
 
             Console.WriteLine("Mininum running time = {0} seconds", min_time);
 
-            int NumTimes = 5;
+            int NumTimes = 50;
 		    for (int iTime = 0; iTime < NumTimes; iTime++)
 		    {
 

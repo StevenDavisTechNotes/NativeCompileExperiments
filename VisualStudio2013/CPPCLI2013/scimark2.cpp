@@ -69,7 +69,7 @@ int main(int argc, char *argv[])
 		exit(1);
 	}
 
-	int NumTimes = 5;
+	int NumTimes = 50;
 	for (int iTime = 0; iTime < NumTimes; iTime++)
 	{
 

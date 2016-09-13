@@ -36,7 +36,7 @@ namespace CSharpNativeUWP
         {
             StorageFolder saveFolder = await KnownFolders.GetFolderForUserAsync(null /* current user */, KnownFolderId.DocumentsLibrary);
             var sampleFile =    await saveFolder.CreateFileAsync("UWPResults.txt", Windows.Storage.CreationCollisionOption.OpenIfExists);
-            int NumTimes = 5;
+            int NumTimes = 50;
             for (int iTime = 0; iTime < NumTimes; iTime++)
             {
                 var value = CommandLine.RunTest(new string[0]);
