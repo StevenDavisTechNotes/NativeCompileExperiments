@@ -1,10 +1,10 @@
 FROM ubuntu
-ENTRYPOINT [ "redis-server", "/usr/local/etc/redis/redis.conf" ]
 
-
-ENV INSTALL_PATH /myapp
-RUN mkdir $INSTALL_PATH
+ENV INSTALL_PATH /myapp/sub/sub
+RUN mkdir /myapp
+RUN mkdir /myapp/sub
+RUN mkdir /myapp/sub/sub
 WORKDIR $INSTALL_PATH
-COPY ./scimark $INSTALL_PATH
+COPY ./scimark2 $INSTALL_PATH
 COPY ./docker-entrypoint.sh $INSTALL_PATH
-ENTRYPOINT ["./docker-entrypoint.sh"]
+ENTRYPOINT ["/myapp/sub/sub/docker-entrypoint.sh"]

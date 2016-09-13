@@ -1,0 +1,7 @@
+FROM microsoft/dotnet
+
+ENV INSTALL_PATH /myapp
+RUN mkdir /myapp
+WORKDIR $INSTALL_PATH
+COPY . $INSTALL_PATH
+ENTRYPOINT ["/myapp/docker-entrypoint.sh"]

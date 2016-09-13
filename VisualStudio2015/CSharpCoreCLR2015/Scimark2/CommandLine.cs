@@ -89,7 +89,7 @@ namespace SciMark2
                 res[5] = kernel.measureLU(LU_size, min_time, R);
 
                 res[0] = (res[1] + res[2] + res[3] + res[4] + res[5]) / 5;
-                File.AppendAllText("..\\..\\ResultLog.txt", string.Format("CSharpCoreCLR2015,{0:F2}\n", res[0]));
+                File.AppendAllText("ResultLog.txt", string.Format("CSharpCoreCLR2015,{0:F2}\n", res[0]));
 
                 // print out results
                 Console.WriteLine();

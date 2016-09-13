@@ -1,5 +1,5 @@
 #!/bin/bash
 set -e
 
-./scimark2
+dotnet run
 cat ResultLog.txt
