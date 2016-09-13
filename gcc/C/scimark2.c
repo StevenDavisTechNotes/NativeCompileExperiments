@@ -61,7 +61,7 @@ int main(int argc, char *argv[])
 		printf("Using %10.2f seconds min time per kenel.\n", min_time);
 
 		FILE *fp;
-		if ((fp = fopen("ResultLog.txt", "at")) == NULL)
+		if ((fp = fopen("../../ResultLog.txt", "at")) == NULL)
 		{
 			fprintf(stderr, "File was not opened\n");
 			exit(1);
@@ -81,7 +81,7 @@ int main(int argc, char *argv[])
 
 
         res[0] = (res[1] + res[2] + res[3] + res[4] + res[5]) / 5;
-		fprintf(fp, "GCC,%8.2f\n", res[0]);
+		fprintf(fp, "GCC,%.2f\n", res[0]);
 
         /* print out results  */
         printf("Composite Score:        %8.2f\n" ,res[0]);
